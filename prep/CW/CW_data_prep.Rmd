@@ -100,10 +100,11 @@ library(stringr)
 library(tools)
 
 ## Directories
-dir_prep = '~/github/toolbox-demo/prep' 
+# dir_prep = '~/github/toolbox-demo/prep' 
+dir_prep = 'E:/R for OHI/github/toolbox-demo/prep'
 dir_cw   = file.path(dir_prep, 'CW')
-dir_layers = '~/github/toolbox-demo/region2016/layers'
-
+# dir_layers = '~/github/toolbox-demo/region2016/layers'
+dir_layers = 'E:/R for OHI/github/toolbox-demo/region2016/layers'
 ```
 
 ## Read in data and initial exploration
@@ -221,7 +222,7 @@ mean_months_summer = mean_months %>%
 ggplot(mean_months_summer) + 
   geom_point(aes(year,mean_secchi)) +
   geom_line(aes(year,mean_secchi))+
-  facet_wrap(~bhi_id)+
+  facet_wrap(~rgn_id)+
   scale_y_continuous(limits = c(0,10))
 
 ```
